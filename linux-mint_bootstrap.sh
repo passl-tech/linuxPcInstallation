@@ -7,8 +7,8 @@
 #cd ~/Downloads
 #git clone https://github.com/pschropp/linuxPcInstallation.git
 #sudo chmod +x linux-mint_bootstrap.sh
-#execute script
-#./linux-mint_bootstrap.sh
+# execute script
+#sudo ./linux-mint_bootstrap.sh
 
 ########### essential ############
 cd ~/Downloads
