@@ -3,10 +3,10 @@
 # $Author: passl $
 # $Revision: 0.1 $
 
-# how to use: make executable:
-#sudo chmod +x linux-mint-bootstrap.sh
+# how to use: clone repo and make bootstrap script executable:
+#sudo chmod +x linux-mint_bootstrap.sh
 # execute script
-#./linux-mint-bootstrap.sh
+#./linux-mint_bootstrap.sh
 
 ########### essential ############
 cd ~/Downloads
