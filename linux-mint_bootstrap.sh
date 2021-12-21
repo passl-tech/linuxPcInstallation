@@ -4,8 +4,10 @@
 # $Revision: 0.1 $
 
 # how to use: clone repo and make bootstrap script executable:
+#cd ~/Downloads
+#git clone https://github.com/pschropp/linuxPcInstallation.git
 #sudo chmod +x linux-mint_bootstrap.sh
-# execute script
+#execute script
 #./linux-mint_bootstrap.sh
 
 ########### essential ############
