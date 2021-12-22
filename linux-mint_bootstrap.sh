@@ -113,7 +113,7 @@ echo "-Firefox Addons: uBlock origin, PrivacyBadger, NoScript, KeepassXC-Browser
 echo "-add printer: via CUPS online interface (http://localhost:631/admin), choose driverless"
 echo "-SSD ONLY!!: activate TRIM by executing this: sudo systemctl enable fstrim.timer && sudo systemctl start fstrim.timer"
 echo "-NexcloudSync"
-echo "-FritzVPN"
+echo "-mount FritzNAS via filemanager: a) via sidebar b) via smb://fritz.box"
 echo "-Firewall UFW"
 
 echo "####Done####"
