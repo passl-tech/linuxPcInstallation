@@ -59,4 +59,5 @@ Klicken Sie bei der VPN-Verbindung auf den An/Aus-Schalter, um die Verbindung he
   > sudo systemctl enable fstrim.timer && sudo systemctl start fstrim.timer
 - NexcloudSync
 - LibreOffice: To activate Ribbons ("Notebookbar") click "View" -> "User Interface.." and chosse toolbar layout
+- mount FritzNAS via filemanager: a) via sidebar b) via smb://fritz.box
 - Firewall UFW
