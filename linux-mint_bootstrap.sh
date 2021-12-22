@@ -28,8 +28,8 @@ echo “Installing Veracrypt”
 sudo add-apt-repository ppa:unit193/encryption && sudo apt update && sudo apt install -y veracrypt
 
 echo “Installing FreeFileSync”
-wget https://freefilesync.org/download/FreeFileSync_11.15_Linux.tar.gz sudo tar -zxvf ~/Downloads/FreeFileSync_*_Linux.tar.gz
-./Installation.run
+wget https://freefilesync.org/download/FreeFileSync_11.15_Linux.tar.gz && sudo tar -zxvf ~/Downloads/FreeFileSync_*_Linux.tar.gz
+sudo ./Installation.run
 
 echo “Installing VPNc for FritzVPN”
 sudo apt install -y network-manager-vpnc-gnome
