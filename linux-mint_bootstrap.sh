@@ -16,14 +16,22 @@ cd ~/Downloads
 echo "Updating and Upgrading"
 sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove -y
 
-echo “Updating firefox to latest by adding ppa”
-sudo add-apt-repository -y ppa:mozillateam && sudo apt update && sudo apt install -y firefox
+echo "adding PPAs"
+sudo add-apt-repository -y ppa:mozillateam #Firefox and Thunderbird
+sudo add-apt-repository -y ppa:phoerious/keepassxc #KeepassXC
+sudo add-apt-repository -y ppa:unit193/encryption #Veracrypt
+sudo add-apt-repository -y ppa:nextcloud-devs/client #NextcloudSync
+sudo add-apt-repository -y multiverse #for Microsoft core fonts and others
+sudo apt update
+
+echo “Updating firefox to latest by adding Mozilla PPA (PPA added above)”
+sudo apt install -y firefox
 
 echo “Installing Keepass”
-sudo add-apt-repository -y ppa:phoerious/keepassxc && sudo apt update && sudo apt install -y keepassxc
+sudo apt install -y keepassxc
 
 echo “Installing Veracrypt”
-sudo add-apt-repository -y ppa:unit193/encryption && sudo apt update && sudo apt install -y veracrypt
+sudo apt install -y veracrypt
 
 echo “Installing FreeFileSync”
 wget https://freefilesync.org/download/FreeFileSync_11.15_Linux.tar.gz && sudo tar -zxvf ~/Downloads/FreeFileSync_*_Linux.tar.gz
@@ -34,7 +42,7 @@ echo “Installing VPNc for FritzVPN”
 sudo apt install -y network-manager-vpnc-gnome
 
 echo “Nextcloudsync”
-sudo add-apt-repository -y ppa:nextcloud-devs/client && sudo apt update && sudo apt install -y nemo-nextcloud
+sudo apt install -y nemo-nextcloud
 
 echo “Installing SCX3405 printer driver”
 # if adding via CUPS online interface (http://localhost:631/admin) and choosing driverless, no driver necessary. 
@@ -62,7 +70,7 @@ sudo apt-get install -y mint-meta-codecs
 
 echo “Installing Microsoft Fonts and Google Replacement Fonts”
 # Install truetype core fonts
-sudo add-apt-repository -y multiverse && sudo apt update && sudo apt install -y ttf-mscorefonts-installer
+sudo apt install -y ttf-mscorefonts-installer
 # Install cleartype fonts (mainly Calibri) and make them available for all users by copying to /usr/share
 sudo apt install -y cabextract fontforge mkdir .fonts && wget http://plasmasturm.org/code/vistafonts-installer/vistafonts-installer chmod +x vistafonts-installer && ./vistafonts-installer
 sudo cp -R ~/.fonts /usr/share/fonts/truetype/microsoft
@@ -77,7 +85,7 @@ wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb && sudo
 sudo rm -r teamviewer_amd64.deb
 
 echo “Thunderbird”
-sudo add-apt-repository -y ppa:mozillateam && sudo apt update && sudo apt install -y thunderbird
+sudo apt install -y thunderbird
 
 echo "########### to be configured ###############"
 echo "-if necessary, configure grub: sudo nano /etc/default/grub AND sudo update-grub"
