@@ -24,8 +24,9 @@ sudo add-apt-repository -y ppa:nextcloud-devs/client #NextcloudSync
 sudo add-apt-repository -y multiverse #for Microsoft core fonts and others
 sudo apt update
 
-echo “Updating firefox to latest by adding Mozilla PPA (PPA added above)”
+echo “Updating Firefox and Thunderbird” #to latest by adding Mozilla PPA (PPA added above)
 sudo apt install -y firefox
+sudo apt install -y thunderbird
 
 echo “Installing Keepass”
 sudo apt install -y keepassxc
@@ -78,14 +79,10 @@ sudo rm -r vistafonts-installer
 # Install google replacements for Calibri and Cambria
 sudo apt install -y fonts-crosextra-carlito fonts-crosextra-caladea && sudo fc-cache -f -v
 
-########### Anwendungssoftware ############
 cd ~/Downloads
 echo “Installing Teamviewer”
 wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb && sudo apt install -y ./teamviewer_amd64.deb
 sudo rm -r teamviewer_amd64.deb
-
-echo “Thunderbird”
-sudo apt install -y thunderbird
 
 # remove unneeded packages
 sudo apt autoremove
