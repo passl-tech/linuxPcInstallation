@@ -17,7 +17,6 @@ sudo add-apt-repository -y ppa:phoerious/keepassxc #KeepassXC
 sudo add-apt-repository -y ppa:unit193/encryption #Veracrypt
 sudo add-apt-repository -y ppa:nextcloud-devs/client #NextcloudSync
 sudo add-apt-repository -y multiverse #for Microsoft core fonts and others
-sudo apt update
 echo "Updating and Upgrading"
 sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove -y
 
