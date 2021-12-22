@@ -13,8 +13,6 @@
 ########### essential ############
 cd ~/Downloads
 
-#sudo update-grub
-
 echo "Updating and Upgrading"
 sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove -y
 
@@ -72,9 +70,6 @@ sudo rm -r vistafonts-installer
 # Install google replacements for Calibri and Cambria
 sudo apt install -y fonts-crosextra-carlito fonts-crosextra-caladea && sudo fc-cache -f -v
 
-#echo “Activating TRIM (SSDs only! uncomment if intalled on SSD)”
-#sudo systemctl enable fstrim.timer && sudo systemctl start fstrim.timer
-
 ########### Anwendungssoftware ############
 cd ~/Downloads
 echo “Installing Teamviewer”
@@ -84,12 +79,15 @@ sudo rm -r teamviewer_amd64.deb
 echo “Thunderbird”
 sudo add-apt-repository -y ppa:mozillateam && sudo apt update && sudo apt install -y thunderbird
 
-########### to be configured ###############
-#firefox account
-#FF Addons - ubock origin, privacy Badger, noScript, KeepassXC
-#nextcloudsync
-#FritzVPN
-#Firewall ufw
+echo "########### to be configured ###############"
+echo "-if necessary, configure grub: sudo nano /etc/default/grub AND sudo update-grub"
+echo "-Firefox Account"
+echo "-Firefox Addons: uBlock origin, PrivacyBadger, NoScript, KeepassXC-Browser"
+echo "-add printer: via CUPS online interface (http://localhost:631/admin), choose driverless"
+echo "-SSD ONLY!!: activate TRIM by executing this: sudo systemctl enable fstrim.timer && sudo systemctl start fstrim.timer"
+echo "-NexcloudSync"
+echo "-FritzVPN"
+echo "-Firewall UFW"
 
-echo “Done”
+echo "####Done####"
 #EOF
