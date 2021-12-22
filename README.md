@@ -7,13 +7,16 @@ installing Linux Mint with Full Disk Encryption in Dual Boot
 optional: git config so that scripts and files can be loaded from github
 
 Printer SCX3405
+
 add printer (for all users) via CUPS online interface (http://localhost:631/admin) and choose driverless (turn on network printer and select printer).
 
 Scanner SCX3405 (all done in bootstrap script)
+
 install additional usb driver (libusb-0.1-4)
 create sane link and add scanner ip and port (9400) to /etc/sane.d/xerox_mfp.conf
 
 FritzVPN (https://avm.de/service/vpn/tipps-tricks/vpn-verbindung-zur-fritzbox-unter-linux-einrichten/)
+
 Klicken Sie im Menü "Einstellungen" auf "Netzwerk", dann im Abschnitt "VPN" auf das Pluszeichen. Das Fenster "VPN hinzufügen" wird geöffnet.
 Wählen Sie im Fenster "VPN hinzufügen" den Eintrag "Cisco-kompatibler VPN-Client (vpnc)" aus.
 Tragen Sie im Eingabefeld "Name" einen beliebigen Namen (FRITZ!Box-VPN) ein.
@@ -26,6 +29,7 @@ Klicken Sie auf die Schaltfläche "Hinzufügen", um die Einrichtung abzuschließ
 Klicken Sie bei der VPN-Verbindung auf den An/Aus-Schalter, um die Verbindung herzustellen.
 
 Additional Configurations
+
 -if necessary, configure grub: sudo nano /etc/default/grub AND sudo update-grub
 -Firefox Account and Addons: uBlock origin, PrivacyBadger, NoScript, KeepassXC-Browser
 -SSD ONLY!!: activate TRIM by executing this: sudo systemctl enable fstrim.timer && sudo systemctl start fstrim.timer
