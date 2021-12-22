@@ -87,6 +87,9 @@ sudo rm -r teamviewer_amd64.deb
 echo “Thunderbird”
 sudo apt install -y thunderbird
 
+# remove unneeded packages
+sudo apt autoremove
+
 echo "########### to be configured ###############"
 echo "-if necessary, configure grub: sudo nano /etc/default/grub AND sudo update-grub"
 echo "-Firefox Account"
