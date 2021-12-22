@@ -63,7 +63,7 @@ echo “Installing Microsoft Fonts and Google Replacement Fonts”
 sudo add-apt-repository multiverse sudo apt update && sudo apt install -y ttf-mscorefonts-installer
 sudo apt install -y cabextract fontforge mkdir .fonts && wget http://plasmasturm.org/code/vistafonts-installer/vistafonts-installer chmod +x vistafonts-installer && ./vistafonts-installer
 sudo fc-cache -f -v
-sudo apt install -y fonts-crosextra--carlito fonts-crosextra-caladea && sudo fc-cache -f -v
+sudo apt install -y fonts-crosextra-carlito fonts-crosextra-caladea && sudo fc-cache -f -v
 
 #echo “Activating TRIM (SSDs only! uncomment if intalled on SSD)”
 #sudo systemctl enable fstrim.timer && sudo systemctl start fstrim.timer
