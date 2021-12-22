@@ -11,3 +11,8 @@ Printer and scanner driverless via CUPS
 
 FritzVPN:
 https://avm.de/service/vpn/tipps-tricks/vpn-verbindung-zur-fritzbox-unter-linux-einrichten/
+
+
+maybe describe some of the configurations suggested at the end of the script
+
+how to use ribbon bar in libreoffice
