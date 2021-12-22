@@ -5,17 +5,12 @@
 
 # how to use: clone repo and make bootstrap script executable:
 #cd ~/Downloads
-#git clone https://github.com/pschropp/linuxPcInstallation.git
+#download/clone from https://github.com/pschropp/linuxPcInstallation.git or google drive
 #sudo chmod +x linux-mint_bootstrap.sh
 # execute script
 #sudo ./linux-mint_bootstrap.sh
 
 ########### essential ############
-cd ~/Downloads
-
-echo "Updating and Upgrading"
-sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove -y
-
 echo "adding PPAs"
 sudo add-apt-repository -y ppa:mozillateam #Firefox and Thunderbird
 sudo add-apt-repository -y ppa:phoerious/keepassxc #KeepassXC
@@ -23,6 +18,13 @@ sudo add-apt-repository -y ppa:unit193/encryption #Veracrypt
 sudo add-apt-repository -y ppa:nextcloud-devs/client #NextcloudSync
 sudo add-apt-repository -y multiverse #for Microsoft core fonts and others
 sudo apt update
+echo "Updating and Upgrading"
+sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove -y
+
+cd ~/Downloads
+
+echo “Installing screen and git”
+sudo apt install -y screen && sudo apt install -y git
 
 echo “Updating Firefox and Thunderbird” #to latest by adding Mozilla PPA (PPA added above)
 sudo apt install -y firefox
@@ -59,9 +61,6 @@ sudo apt install -y libusb-0.1-4
 cd /usr/lib/x86_64-linux-gnu/sane && sudo ln -s /opt/smfp-common/scanner/lib/libsane-smfp.so.1.0.1 /usr/lib/x86_64-linux-gnu/sane/libsane-smfp.so.1
 sudo printf “# Samsung SCX-3405W, network mode \n # tcp HOST_ADDR PORT \n tcp 192.168.179.30 9400”  >> /etc/sane.d/xerox_mfp.conf
 
-echo “Installing screen and git”
-sudo apt install -y screen && sudo apt install -y git
-
 echo “Installing TLP to save power on laptops”
 sudo apt install -y tlp
 
@@ -85,7 +84,7 @@ wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb && sudo
 sudo rm -r teamviewer_amd64.deb
 
 # remove unneeded packages
-sudo apt autoremove
+sudo apt autoremove -y
 
 echo "########### to be configured ###############"
 echo "-if necessary, configure grub: sudo nano /etc/default/grub AND sudo update-grub"
