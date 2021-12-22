@@ -51,13 +51,16 @@ Klicken Sie auf die Schaltfläche "Hinzufügen", um die Einrichtung abzuschließ
 Klicken Sie bei der VPN-Verbindung auf den An/Aus-Schalter, um die Verbindung herzustellen.
 
 ## Additional Configurations
+### General
 - if necessary, configure grub: 
   > sudo nano /etc/default/grub <br/>
   > sudo update-grub
-- Firefox Account and Addons: uBlock origin, PrivacyBadger, NoScript, KeepassXC-Browser
 - SSD ONLY!!: activate TRIM by executing this: 
   > sudo systemctl enable fstrim.timer && sudo systemctl start fstrim.timer
+- Firewall UFW
+
+### Per User
+- Firefox Account and Addons: uBlock origin, PrivacyBadger, NoScript, KeepassXC-Browser
 - NexcloudSync
 - LibreOffice: To activate Ribbons ("Notebookbar") click "View" -> "User Interface.." and chosse toolbar layout
 - mount FritzNAS via filemanager: a) via sidebar b) via smb://fritz.box
-- Firewall UFW
