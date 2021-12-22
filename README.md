@@ -15,4 +15,8 @@ https://avm.de/service/vpn/tipps-tricks/vpn-verbindung-zur-fritzbox-unter-linux-
 
 maybe describe some of the configurations suggested at the end of the script
 
+
+update libreoffice, als in Script
+https://libre-software.net/how-to-install-libreoffice-on-ubuntu-linux-mint/
+
 how to use ribbon bar in libreoffice
