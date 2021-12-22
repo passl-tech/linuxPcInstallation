@@ -63,9 +63,13 @@ sudo apt-get install -y ubuntu-restricted-extras #also includes Microsoft Fonts
 sudo apt-get install -y mint-meta-codecs
 
 echo “Installing Microsoft Fonts and Google Replacement Fonts”
+# Install truetype core fonts
 sudo add-apt-repository multiverse sudo apt update && sudo apt install -y ttf-mscorefonts-installer
+# Install cleartype fonts (mainly Calibri) and make them available for all users by copying to /usr/share
 sudo apt install -y cabextract fontforge mkdir .fonts && wget http://plasmasturm.org/code/vistafonts-installer/vistafonts-installer chmod +x vistafonts-installer && ./vistafonts-installer
-sudo fc-cache -f -v
+sudo cp -R ~/.fonts /usr/share/fonts/truetype/microsoft
+sudo rm -r vistafonts-installer
+# Install google replacements for Calibri and Cambria
 sudo apt install -y fonts-crosextra-carlito fonts-crosextra-caladea && sudo fc-cache -f -v
 
 #echo “Activating TRIM (SSDs only! uncomment if intalled on SSD)”
