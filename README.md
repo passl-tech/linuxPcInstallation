@@ -29,7 +29,9 @@ Klicken Sie auf die Schaltfläche "Hinzufügen", um die Einrichtung abzuschließ
 Klicken Sie bei der VPN-Verbindung auf den An/Aus-Schalter, um die Verbindung herzustellen.
 
 ## Additional Configurations
-- if necessary, configure grub: sudo nano /etc/default/grub AND sudo update-grub
+- if necessary, configure grub: 
+  > sudo nano /etc/default/grub 
+  > sudo update-grub
 - Firefox Account and Addons: uBlock origin, PrivacyBadger, NoScript, KeepassXC-Browser
 - SSD ONLY!!: activate TRIM by executing this: 
   > sudo systemctl enable fstrim.timer && sudo systemctl start fstrim.timer
