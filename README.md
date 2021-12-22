@@ -1,8 +1,31 @@
 # Installation script for Linux post-installation
 
-put hardcopies of:
-
 ## Installing Linux Mint with Full Disk Encryption in Dual Boot
+Source: https://echo-bravo-fox.medium.com/linux-and-windows-encrypted-in-dual-boot-12329821367c <br/>
+Linux Mint 20 and Windows 10 in dual boot and both the OSs encrypted. <br/>
+Requirements:
+- Windows installed.
+- Unallocated space in your disk
+
+### Linux
+1) Insert the USB key and boot Linux.
+2) Start the installer and proceed until you have to select the installation type, choose "Something else".
+3) Select the unallocated space, click on the + button and create a partition for the kernels: "Primary", "EXT4 journaling file system", "/boot". This partition is not encrypted. With a size of 550MB it will hold 4-5 kernels, can be bigger.
+4) Click + to create the encrypted partition, that will hold the OS, in the empty space and set up the password: "Primary", "physical volume for encryption", password.
+5) You will find the new encrypted partition at the top of the list, select it, click on the Change button and mount it: "EXT4 journaling file system", Mount Point "/"
+6) Click on Install Now and proceed with the installation.
+7) If you have Secure Boot enabled you will be asked to select an other password that you’ll need to insert after the reboot. Reboot, select Install MOK, insert the last password and proceed with the log in. If you don’t have Secure Boot enabled simply reboot.
+8) Now you have Linux encrypted.
+
+### Optional: Windows
+Warning: avoid Hibernation to not break the dual boot.
+1) Open Veracrypt and select "System", "Encrypt System Partition/Drive"
+2) Select "Normal"
+3) Select "Encrypt the Windows System Partition"
+4) Select "Multi-Boot". If not displayed, follow https://medium.com/@lankycyril/using-veracrypt-with-a-uefi-dual-boot-setup-27d1eacbf36b
+5) Select the Algorithm: keep AES (default)
+6) Create rescue file
+7) ...
 
 ## Optional: git config 
 so that scripts and files can be loaded from github
@@ -11,8 +34,8 @@ so that scripts and files can be loaded from github
 add printer (for all users) via CUPS online interface (http://localhost:631/admin) and choose driverless (turn on network printer and select printer).
 
 ## Scanner SCX3405 (all done in bootstrap script)
-install additional usb driver (libusb-0.1-4)  <br/>
-create sane link and add scanner ip and port (9400) to '/etc/sane.d/xerox_mfp.conf'
+install additional usb driver (libusb-0.1-4) <br/>
+create sane link and add scanner ip and port (9400) to `/etc/sane.d/xerox_mfp.conf`
 
 ## FritzVPN
 (https://avm.de/service/vpn/tipps-tricks/vpn-verbindung-zur-fritzbox-unter-linux-einrichten/)  <br/>
