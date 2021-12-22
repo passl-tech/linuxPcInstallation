@@ -12,7 +12,7 @@ add printer (for all users) via CUPS online interface (http://localhost:631/admi
 
 ## Scanner SCX3405 (all done in bootstrap script)
 install additional usb driver (libusb-0.1-4)
-create sane link and add scanner ip and port (9400) to /etc/sane.d/xerox_mfp.conf
+create sane link and add scanner ip and port (9400) to '/etc/sane.d/xerox_mfp.conf'
 
 ## FritzVPN
 (https://avm.de/service/vpn/tipps-tricks/vpn-verbindung-zur-fritzbox-unter-linux-einrichten/)
@@ -31,7 +31,8 @@ Klicken Sie bei der VPN-Verbindung auf den An/Aus-Schalter, um die Verbindung he
 ## Additional Configurations
 - if necessary, configure grub: sudo nano /etc/default/grub AND sudo update-grub
 - Firefox Account and Addons: uBlock origin, PrivacyBadger, NoScript, KeepassXC-Browser
-- SSD ONLY!!: activate TRIM by executing this: sudo systemctl enable fstrim.timer && sudo systemctl start fstrim.timer
+- SSD ONLY!!: activate TRIM by executing this: 
+  > sudo systemctl enable fstrim.timer && sudo systemctl start fstrim.timer
 - NexcloudSync
 - LibreOffice: To activate Ribbons ("Notebookbar") click "View" -> "User Interface.." and chosse toolbar layout
 - Firewall UFW
