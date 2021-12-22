@@ -1,5 +1,5 @@
 #!/bin/bash
-# Linux Mint Setup script 12/2021 with sudos
+# Linux Mint Setup script 12/2021
 # $Author: passl $
 # $Revision: 0.1 $
 
@@ -19,13 +19,13 @@ echo "Updating and Upgrading"
 sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove -y
 
 echo “Updating firefox to latest by adding ppa”
-sudo add-apt-repository ppa:mozillateam && sudo apt update && sudo apt install -y firefox
+sudo add-apt-repository -y ppa:mozillateam && sudo apt update && sudo apt install -y firefox
 
 echo “Installing Keepass”
-sudo add-apt-repository ppa:phoerious/keepassxc && sudo apt update && sudo apt install -y keepassxc
+sudo add-apt-repository -y ppa:phoerious/keepassxc && sudo apt update && sudo apt install -y keepassxc
 
 echo “Installing Veracrypt”
-sudo add-apt-repository ppa:unit193/encryption && sudo apt update && sudo apt install -y veracrypt
+sudo add-apt-repository -y ppa:unit193/encryption && sudo apt update && sudo apt install -y veracrypt
 
 echo “Installing FreeFileSync”
 wget https://freefilesync.org/download/FreeFileSync_11.15_Linux.tar.gz && sudo tar -zxvf ~/Downloads/FreeFileSync_*_Linux.tar.gz
@@ -36,7 +36,7 @@ echo “Installing VPNc for FritzVPN”
 sudo apt install -y network-manager-vpnc-gnome
 
 echo “Nextcloudsync”
-sudo add-apt-repository ppa:nextcloud-devs/client && sudo apt update && sudo apt install -y nemo-nextcloud
+sudo add-apt-repository -y ppa:nextcloud-devs/client && sudo apt update && sudo apt install -y nemo-nextcloud
 
 echo “Installing SCX3405 printer driver”
 # if adding via CUPS online interface (http://localhost:631/admin) and choosing driverless, no driver necessary. 
@@ -64,7 +64,7 @@ sudo apt-get install -y mint-meta-codecs
 
 echo “Installing Microsoft Fonts and Google Replacement Fonts”
 # Install truetype core fonts
-sudo add-apt-repository multiverse sudo apt update && sudo apt install -y ttf-mscorefonts-installer
+sudo add-apt-repository -y multiverse && sudo apt update && sudo apt install -y ttf-mscorefonts-installer
 # Install cleartype fonts (mainly Calibri) and make them available for all users by copying to /usr/share
 sudo apt install -y cabextract fontforge mkdir .fonts && wget http://plasmasturm.org/code/vistafonts-installer/vistafonts-installer chmod +x vistafonts-installer && ./vistafonts-installer
 sudo cp -R ~/.fonts /usr/share/fonts/truetype/microsoft
@@ -82,13 +82,13 @@ wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb && sudo
 sudo rm -r teamviewer_amd64.deb
 
 echo “Thunderbird”
-sudo add-apt-repository ppa:mozillateam && sudo apt update && sudo apt install -y thunderbird
+sudo add-apt-repository -y ppa:mozillateam && sudo apt update && sudo apt install -y thunderbird
 
 ########### to be configured ###############
-#nextcloudsync
 #firefox account
-#FritzVPN
 #FF Addons - ubock origin, privacy Badger, noScript, KeepassXC
+#nextcloudsync
+#FritzVPN
 #Firewall ufw
 
 echo “Done”
