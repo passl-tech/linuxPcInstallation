@@ -27,8 +27,17 @@ Warning: avoid Hibernation to not break the dual boot.
 6) Create rescue file
 7) ...
 
-## Optional: git config 
+## Optional: Setup and configure git and credential to use with github)
 so that scripts and files can be loaded from github
+
+sudo apt install git
+git config --global user.name "YOUR NAME"
+git config --global user.email "YOUR EMAIL"
+git config --global credential.helper cache
+
+if necessary, download the latest .deb package, and run the following:
+sudo dpkg -i <path-to-package>
+git-credential-manager-core configure
 
 ## Printer SCX3405
 add printer (for all users) via CUPS online interface (http://localhost:631/admin) and choose driverless (turn on network printer and select printer).
