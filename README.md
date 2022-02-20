@@ -41,7 +41,7 @@ sudo dpkg -i <path-to-package>
 git-credential-manager-core configure
 ```
 ## Printer SCX3405
-add printer (for all users) via CUPS online interface (http://localhost:631/admin) and choose driverless (turn on network printer and select printer).
+add printer (for all users) via CUPS online interface (http://localhost:631/admin) and choose driverless (turn on network printer and select printer). For printer URI choose ipp://192.168.17x.xx (put real IP), not mDNS or implicticlass... or whatever. Activate SLP at Port 9100 to make printer discoverable for smartphone printing apps/services.
 
 ## Scanner SCX3405 (all done in bootstrap script)
 install additional usb driver (libusb-0.1-4) <br/>
