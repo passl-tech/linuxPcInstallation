@@ -72,5 +72,5 @@ Klicken Sie bei der VPN-Verbindung auf den An/Aus-Schalter, um die Verbindung he
 ### Per User
 - Firefox Account and Addons: uBlock origin, PrivacyBadger, NoScript, KeepassXC-Browser
 - NexcloudSync
-- LibreOffice: To activate Ribbons ("Notebookbar") click "View" -> "User Interface.." and chosse toolbar layout
+- LibreOffice: To activate Ribbons ("Notebookbar") click "View" -> "User Interface.." and chosse toolbar layout 'tabbed or 'tabbed compact'. Alt+F12, then View (under libre office) and click Icon Style 'Colibre'. https://www.howtogeek.com/788591/how-to-make-libreoffice-look-like-microsoft-office/
 - mount FritzNAS via filemanager: a) via sidebar b) via smb://fritz.box
