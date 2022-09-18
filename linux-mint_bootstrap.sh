@@ -1,16 +1,25 @@
 #!/bin/bash
 # Linux Mint Setup script 12/2021
 # $Author: passl $
-# $Revision: 0.1 $
+# $Revision: 0.2 $
 
-# how to use: clone repo and make bootstrap script executable:
+########### Usage ##################
+# set username here
+USERNAME="passl"
+readonly USERNAME
+
+# clone repo and make bootstrap script executable:
 #cd ~/Downloads
-#download/clone from https://github.com/pschropp/linuxPcInstallation.git or google drive
+# download/clone from https://github.com/pschropp/linuxPcInstallation.git or google drive
 #sudo chmod +x linux-mint_bootstrap.sh
 # execute script
 #sudo ./linux-mint_bootstrap.sh
 
 ########### essential ############
+echo "preparing"
+sudo apt install curl
+sudo apt install apt-transport-https  # for using apt with https repos
+
 echo "remove old versions of Firefox, Thunderbird and LibreOffice"
 sudo apt purfirefoxge -y firefox
 sudo rm -Rf /etc/firefox/ /usr/lib/firefox*
@@ -61,11 +70,18 @@ wget https://freefilesync.org/download/FreeFileSync_11.15_Linux.tar.gz && sudo t
 sudo ./FreeFileSync_*_Install.run
 sudo rm -r FreeFileSync_*_Install.run FreeFileSync_*_Linux.tar.gz
 
-echo "Installing VPNc for FritzVPN"
-sudo apt install -y network-manager-vpnc-gnome
+#echo "Installing VPNc for FritzVPN"
+#sudo apt install -y network-manager-vpnc-gnome
 
-echo "Nextcloudsync"
-sudo apt install -y nemo-nextcloud
+#echo "Nextcloudsync"
+#sudo apt install -y nemo-nextcloud
+
+echo "Syncthing"
+curl -s https://syncthing.net/release-key.txt | sudo apt-key add -
+echo "deb https://apt.syncthing.net/ syncthing stable" | sudo tee /etc/apt/sources.list.d/syncthing.list
+sudo apt update && sudo apt install -y syncthing
+sudo systemctl enable syncthing@$USERNAME.service
+sudo systemctl start syncthing@$USERNAME.service
 
 echo "Installing SCX3405 printer driver"
 # if adding via CUPS online interface (http://localhost:631/admin) and choosing driverless, no driver necessary. 
@@ -112,8 +128,7 @@ echo "-Firefox Account"
 echo "-Firefox Addons: uBlock origin, PrivacyBadger, NoScript, KeepassXC-Browser"
 echo "-add printer: via CUPS online interface (http://localhost:631/admin), choose driverless"
 echo "-SSD ONLY!!: activate TRIM by executing this: sudo systemctl enable fstrim.timer && sudo systemctl start fstrim.timer"
-echo "-NexcloudSync"
-echo "-mount FritzNAS via filemanager: a) via sidebar b) via smb://fritz.box"
+echo "-Syncthing: GUI password, connect devices, select folders"
 echo "-Firewall UFW"
 
 echo "####Done####"
