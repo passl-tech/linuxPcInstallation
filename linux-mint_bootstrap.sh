@@ -5,7 +5,7 @@
 
 ########### Usage ##################
 # set username here
-USERNAME="passl"
+USERNAME="qwert"
 readonly USERNAME
 
 # clone repo and make bootstrap script executable:
@@ -115,7 +115,7 @@ sudo rm -r vistafonts-installer
 sudo apt install -y fonts-crosextra-carlito fonts-crosextra-caladea && sudo fc-cache -f -v
 
 cd ~/Downloads
-echo “Installing Rustdesk”
+echo "Installing Rustdesk"
 wget https://github.com/rustdesk/rustdesk/releases/download/1.1.10/rustdesk-1.1.10.deb && sudo apt install -y ./rustdesk-1.1.10
 sudo rm -r ./rustdesk-1.1.10
 
