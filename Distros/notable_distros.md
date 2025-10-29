@@ -1,8 +1,11 @@
 Distros to keep an eye on:
 - Proxmox: virtualisation and LXC with web interface
 - openmediavault: NAS
-- Ubuntu and Fedora
+- Ubuntu
+- Fedora
 - Manjaro: Arch Linux, entry friendly
+- CachyOS
+- ElementaryOS
 - GParted Live CD: Partitionierung
 - Rescatux: Restore Windows MBR, Promote Windows User to Admin, Easy Wi does Admin (also delete user password), Unlock Windows User
 - Damn Small Linux
