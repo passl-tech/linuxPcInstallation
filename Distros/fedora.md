@@ -16,4 +16,10 @@ sudo dnf install fuse-libs
 This usually happens on modern Linux distributions that may have switched to FUSE 3 (using libfuse3.so.3) and no longer include the older FUSE 2 library (libfuse.so.2) by default, even though VeraCrypt still depends on it.
 
 # Cosmic Spin
+## Setup
 - activate flatpak repositories in Store
+## Fix Cosmic Files to work with smb Shares
+If connections to smb servers cannot be established via the Files UI, the necessary package for interacting with Samba (SMB) shares, gvfs-smb, is likely not installed (Gnome). The GVFS (GNOME Virtual File System) backend handles connections to various remote file systems, including SMB.
+```bash
+sudo dnf install gvfs-smb
+```
